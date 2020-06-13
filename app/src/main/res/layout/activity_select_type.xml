@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SelectType">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:text="Checkout"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/type"
+            android:layout_width="100dp"
+            android:layout_gravity="center"
+            android:layout_height="100dp"
+            android:src="@drawable/taxi"/>
+
+        <TextView
+            android:id="@+id/driverName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/type"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/driverPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/driverName"
+            android:layout_toEndOf="@+id/type"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:id="@+id/sanitizedContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/type"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:textSize="18sp"
+                android:text="How many times do you want to get sanitized"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:layout_gravity="center"
+                android:paddingStart="10dp">
+
+                <ImageView
+                    android:id="@+id/remove"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:baselineAligned="false"
+                    android:src="@drawable/ic_baseline_remove_24" />
+
+                <TextView
+                    android:id="@+id/sanitized"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/add"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_baseline_add_24" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ratings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_below="@+id/driverPhone"
+            android:layout_toEndOf="@+id/type"
+            android:layout_marginTop="10dp"
+            android:text="Rating 4/5"/>
+
+        <TextView
+            android:id="@+id/totalCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_above="@+id/checkout"
+            android:layout_marginTop="10dp"
+            android:text="Total Cost is 500"/>
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:layout_below="@+id/sanitizedContainer"
+            android:text="Do you want to get your vehicle sanitized before boarding?"/>
+
+        <TextView
+            android:id="@+id/travelling"
+            android:textSize="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Travelling : 400"
+            android:layout_below="@+id/checkbox"/>
+
+        <TextView
+            android:id="@+id/timesSanitized"
+            android:textSize="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:text="Sanitization : 400"
+            android:layout_below="@+id/travelling"/>
+
+        <TextView
+            android:id="@+id/carSanitizedDelivery"
+            android:textSize="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:text="Car Sanitization : 20"
+            android:layout_below="@+id/timesSanitized"/>
+
+        <Button
+            android:id="@+id/checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/pink"
+            android:textColor="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:text="Checkout"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>
