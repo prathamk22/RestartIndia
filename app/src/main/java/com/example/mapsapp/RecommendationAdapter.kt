@@ -35,20 +35,11 @@ class RecommendationAdapter :
                 else
                     driverRating.setTextColor(Color.parseColor("#ff0000"))
                 driverRating.text = "${model.ratings}/5"
-                typeIv.setImageDrawable(
-                    context.getDrawable(
-                        when (model.type) {
-                            "Taxi" -> R.drawable.taxi
-                            "Bus"->R.drawable.bus
-                            "AutoRickshaw"->R.drawable.autorickshaw
-                            else -> R.drawable.taxi
-                        }
-                    )
-                )
                 phoneNumber.text = model.phoneNumber
-                if (model.type=="Bus")
-                    sanitized.isVisible = false
                 sanitized.text = "${model.sanitized} times sanitized"
+                if (model.type=="Bus"){
+                    sanitized.text = "${(1..5).random()} availability"
+                }
                 travelled.text = "${model.number}KM"
                 cost.text = "$${model.money}"
                 setOnClickListener {

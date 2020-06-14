@@ -141,7 +141,7 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
                 app:cardBackgroundColor="@color/pink"
@@ -152,6 +152,7 @@
                     android:id="@+id/taxi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:paddingEnd="10dp"
                     android:layout_margin="10dp">
 
                     <ImageView
@@ -177,7 +178,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="15dp"
@@ -188,6 +189,7 @@
                     android:id="@+id/bus"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:paddingEnd="10dp"
                     android:layout_margin="10dp">
 
                     <ImageView
@@ -212,7 +214,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="15dp"
@@ -223,6 +225,7 @@
                     android:id="@+id/autoRickshaw"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:paddingEnd="10dp"
                     android:layout_margin="10dp">
 
                     <ImageView
@@ -247,7 +250,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="15dp"
@@ -258,6 +261,7 @@
                     android:id="@+id/metro"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:paddingEnd="10dp"
                     android:layout_margin="10dp">
 
                     <ImageView
@@ -266,7 +270,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/autorickshaw" />
+                        android:src="@drawable/metro" />
 
                     <TextView
                         android:layout_width="wrap_content"

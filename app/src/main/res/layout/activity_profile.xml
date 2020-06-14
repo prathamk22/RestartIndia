@@ -67,10 +67,12 @@
         android:layout_height="wrap_content"
         android:textColor="#a3a3a3"
         android:text="Reward Coints"/>
-    <EditText
+    <TextView
+        android:id="@+id/rewardCoins"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@null"
+        android:textSize="18sp"
         android:padding="10dp"
         android:text="800"/>
 

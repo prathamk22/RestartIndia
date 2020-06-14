@@ -2,6 +2,7 @@ package com.example.mapsapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.Display
 import kotlinx.android.synthetic.main.activity_review.*
 

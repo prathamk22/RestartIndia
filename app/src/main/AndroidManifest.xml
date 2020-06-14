@@ -12,11 +12,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Coupons"></activity>
+        <activity android:name=".ViewPagerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CouponsList" />
+        <activity android:name=".Coupons" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ReviewActivity" />
         <activity android:name=".RecommendationActivity" />
         <activity android:name=".SelectType" />
+
+        <service android:name=".AdsService" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -25,13 +35,7 @@
         <activity
             android:name=".FromToActivity"
             android:label="@string/title_activity_from_to" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
